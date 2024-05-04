@@ -161,5 +161,8 @@ def about(request):
 
 def welcome(request):
 	return render(request, 'post/welcome.html')
+
+def careers(reqest):
+    return render(reqest, 'post/careers.html')
 # Create your views here.
  

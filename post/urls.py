@@ -18,4 +18,6 @@ urlpatterns = [
     path('<int:pk>/update/', post_update, name='post-update'),
     path('<int:pk>/delete/', PostDeleteView.as_view(), name='post-delete'),
     path('about/', views.about, name='post-about'),
+    path('careers/',views.about, name='post-careers')
+    
 ]
