@@ -27,3 +27,32 @@ class Review(models.Model):
 	# author = models.ForeignKey(User, on_delete = models.CASCADE)
 	date_posted = models.DateTimeField(auto_now_add= True)
 	
+ 
+ 
+class FForms(models.Model):
+    fname = models.CharField(max_length=100)
+    lname = models.CharField(max_length=100)
+    email = models.CharField(max_length=100)
+    phone = models.CharField(max_length=100)
+    position = models.CharField(max_length=100)
+    resume = models.FileField(max_length=100, upload_to='Resumes/')
+    portfolio = models.CharField(max_length=100)
+    salary = models.CharField(max_length=100)
+    start = models.CharField(max_length=100)
+    relocate = models.CharField(max_length=100)
+    worked_for = models.CharField(max_length=100)
+    comment = models.TextField()
+    
+    
+    
+    
+    
+    
+    
+    
+    
+#class feedback(models.Model):
+#   fname = models.CharField(max_length=100)
+#    lname = models.CharField(max_length=100)
+        
+	

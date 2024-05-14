@@ -13,11 +13,12 @@ urlpatterns = [
     path('user/dashboardads/<str:username>', UserDashboardAds.as_view(), name='user-dashboardads'),
     path('<int:pk>/', PaymentView.as_view(), name='payment'),
     path('payment/<int:pk>/', PostDetailView, name='post-detail'),
-    
+    path('allforms/', views.allforms, name="allforms"),
     path('new/', post_create, name='post-create'),
     path('<int:pk>/update/', post_update, name='post-update'),
     path('<int:pk>/delete/', PostDeleteView.as_view(), name='post-delete'),
     path('about/', views.about, name='post-about'),
-    path('careers/',views.about, name='post-careers')
-    
+    path('careers/',views.about, name='post-careers'),
+    path('form/',views.forms, name='form'),
+    path('feedback/',views.about, name='post-feedback'),
 ]

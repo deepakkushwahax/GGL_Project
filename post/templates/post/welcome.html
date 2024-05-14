@@ -40,7 +40,8 @@
 	      	  <li><a href="{% url 'advert-create' %}"><span class="glyphicon glyphicon-user"></span>	Have a business?</a></li>
 	      	  <li><a href="{% url 'post-create' %}"><span class="glyphicon glyphicon-user"></span>	Post New Tender</a></li>
 	      	  <li><a href="{% url 'user-profile' %}"><span class="glyphicon glyphicon-user"></span>	Profile</a></li>
-	      	  <li><a href="{% url 'user-logout' %}"><span class="glyphicon glyphicon-user"></span>	Logout</a></li>
+				<li><a href="{%url 'allforms'%}"><span class="glyphicon glyphicon-user"></span>	All Forms</a></li> 
+			  <li><a href="{% url 'user-logout' %}"><span class="glyphicon glyphicon-user"></span>	Logout</a></li>
 	      {% else %}
 	      	  <li><a href="{% url 'user-register' %}"><span class="glyphicon glyphicon-log-in"></span>	Sign Up</a></li>
 		      <li><a href="{% url 'user-login' %}"><span class="glyphicon glyphicon-log-in"></span>	Log In</a></li>
@@ -124,8 +125,11 @@
 	      <a href="{% url 'post-home' %}"><p style="color: white">Home</p></a>
 	      <a href="{% url 'post-about' %}"><p style="color: white">About</p></a>
 		  <a href="{% url 'post-careers' %}"><p style="color: white">Careers</p></a>
+		  <a href="{% url 'post-feedback' %}"><p style="color: white">Feedback</p></a>
+
 
 	      <br>
+		  
 	    </div>
 	    <div class="col-sm-4">
 	      <a href="{% url 'user-register' %}"><p style="color: white">Register</p></a>

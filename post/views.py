@@ -1,9 +1,10 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.http import HttpResponse
+from django.contrib import messages
 from django.contrib.auth.models import User
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from .models import Post, Review
+from .models import *
 from advert.models import Advert
 from .forms import PostCreateForm, PostUpdateForm, ReviewForm
 from django.contrib.auth.decorators import login_required
@@ -157,12 +158,54 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 		return False
 
 def about(request):
-	return render(request, 'post/about.html')
+	return render(request, 'post/careers.html')
 
 def welcome(request):
 	return render(request, 'post/welcome.html')
 
 def careers(reqest):
     return render(reqest, 'post/careers.html')
+
+
+def forms(request):
+    if request.method == 'POST':
+        fname = request.POST['fname']
+        lname = request.POST['lname']
+        email = request.POST['email']
+        tel = request.POST['tel']
+        position = request.POST['position']
+        resume = request.FILES.get('resume')
+        website = request.POST['website']
+        salary = request.POST['salary']
+        joining = request.POST['joining']
+        relocation = request.POST['relocation']
+        lastemployer = request.POST['last-employer']
+        address = request.POST['address']
+        obj = FForms()
+        obj.fname = fname
+        obj.lname = lname
+        obj.phone = tel
+        obj.email = email
+        obj.position = position
+        obj.resume = resume
+        obj.portfolio = website
+        obj.salary = salary
+        obj.start = joining
+        obj.relocate = relocation
+        obj.worked_for = lastemployer
+        obj.comment = address
+        obj.save()
+        messages.success(request, 'Applied Successfully')
+        return redirect('home')
+    else:
+    	return render(request, 'post/forms.html')
 # Create your views here.
  
+ 
+ 
+def allforms(reqest):
+    obj = FForms.objects.all()
+    return render(reqest, 'post/allforms.html', {'obj':obj})
+
+def Feedback(reqest):
+    return render(reqest, 'post/feedback.html')
