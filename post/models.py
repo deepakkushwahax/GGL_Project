@@ -45,14 +45,11 @@ class FForms(models.Model):
     
     
     
-    
-    
-    
-    
-    
-    
 #class feedback(models.Model):
-#   fname = models.CharField(max_length=100)
-#    lname = models.CharField(max_length=100)
+#   uname = models.CharField(max_length=100)
+#   email = models.CharField(max_length=100)
+#   phone = models.CharField(max_length=100)
+#   satisty = models.CharField(max_length=100)
+#   msg = models.TextField(max_length=100)
         
 	

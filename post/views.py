@@ -199,13 +199,32 @@ def forms(request):
         return redirect('home')
     else:
     	return render(request, 'post/forms.html')
-# Create your views here.
- 
  
  
 def allforms(reqest):
     obj = FForms.objects.all()
     return render(reqest, 'post/allforms.html', {'obj':obj})
 
-def Feedback(reqest):
+def feedback(reqest):
     return render(reqest, 'post/feedback.html')
+
+
+def feedform(request):
+    if request.method == 'POST':
+        uname = request.POST['fname']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        satisty = request.POST['satisty']
+        msg = request.POST['msg']
+        obj = feedform()
+        obj.uname = uname
+        obj.email = email
+        obj.phone = phone
+        obj.satisty = satisty
+        obj.msg = msg
+        obj.save()
+        messages.success(request, 'Applied Successfully')
+        return redirect('home')
+    else:
+    	return render(request, 'post/feedback.html')
+        
