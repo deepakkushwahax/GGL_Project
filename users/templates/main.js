@@ -1,4 +1,4 @@
-const jobs = [
+users/templates/main.jsconst jobs = [
   {
     title: "Software Engineer",
     image: "images/software-engineer.svg",

@@ -205,8 +205,6 @@ def allforms(reqest):
     obj = FForms.objects.all()
     return render(reqest, 'post/allforms.html', {'obj':obj})
 
-def feedback(reqest):
-    return render(reqest, 'post/feedback.html')
 
 
 def feedform(request):

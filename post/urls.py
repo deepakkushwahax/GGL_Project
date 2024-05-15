@@ -20,5 +20,5 @@ urlpatterns = [
     path('about/', views.about, name='post-about'),
     path('careers/',views.about, name='post-careers'),
     path('form/',views.forms, name='form'),
-    path('feedback/',views.about, name='post-feedback'),
+    path('feedback/',views.feedform, name='post-feedback'),
 ]
