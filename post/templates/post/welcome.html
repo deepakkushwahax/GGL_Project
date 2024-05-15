@@ -29,7 +29,7 @@
 	      </a>
 	    </div>
 	    <ul class="nav navbar-nav">
-	      <li ><a href="{% url 'post-home' %}">Home</a></li>
+	      <li ><a href="{% url 'post-home' %}">View Tender</a></li>
 	      <li ><a href="{% url 'advert-home' %}">Ads</a></li>
 	      <li><a href="{% url 'post-about' %}">About</a></li>
 	    </ul>
@@ -40,7 +40,7 @@
 	      	  <li><a href="{% url 'advert-create' %}"><span class="glyphicon glyphicon-user"></span>	Have a business?</a></li>
 	      	  <li><a href="{% url 'post-create' %}"><span class="glyphicon glyphicon-user"></span>	Post New Tender</a></li>
 	      	  <li><a href="{% url 'user-profile' %}"><span class="glyphicon glyphicon-user"></span>	Profile</a></li>
-				<li><a href="{%url 'allforms'%}"><span class="glyphicon glyphicon-user"></span>	All Forms</a></li> 
+			<!--	<li><a href="{%url 'allforms'%}"><span class="glyphicon glyphicon-user"></span>	All Forms</a></li> -->
 			  <li><a href="{% url 'user-logout' %}"><span class="glyphicon glyphicon-user"></span>	Logout</a></li>
 	      {% else %}
 	      	  <li><a href="{% url 'user-register' %}"><span class="glyphicon glyphicon-log-in"></span>	Sign Up</a></li>
@@ -125,7 +125,7 @@
 	      <a href="{% url 'post-home' %}"><p style="color: white">Home</p></a>
 	      <a href="{% url 'post-about' %}"><p style="color: white">About</p></a>
 		  <a href="{% url 'post-careers' %}"><p style="color: white">Careers</p></a>
-		  <a href="post/feedback/"><p style="color: white">Feedback</p></a>
+		  <a href="post/feedback/"><p style="color: white">Contact Us</p></a>
 
 
 	      <br>
