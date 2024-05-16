@@ -138,3 +138,8 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'deepakkushwaha7523@bbdu.ac.in'
 EMAIL_HOST_PASSWORD = 'Codex78@#'
+
+GRAPH_MODELS = {
+    "all_applications":True,
+    "group_models":True,
+}
